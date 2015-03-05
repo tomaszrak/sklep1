@@ -12,7 +12,7 @@ Class Database {
     }
 
 
-    //użytkownicy 
+    //użytkownicy
     //dodanie użytkownika
     public static function addUser($user) {
         $stmt = self::$db->prepare("INSERT INTO uzytkownik(imie,nazwisko,adres,telefon,email,login,haslo) "
