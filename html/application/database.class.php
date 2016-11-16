@@ -6,7 +6,7 @@ Class Database {
 
     public static function getInstance() {
         if (!self::$db) {
-            self::$db = new PDO('mysql:host=mysql.cba.pl;dbname=traksklep1_cba_pl;charset=utf8', 'traksklep1', '1Skleptrak');
+            self::$db = new PDO('mysql:host=;dbname=;charset=utf8', '', '');
             return new Database();
         }
     }
