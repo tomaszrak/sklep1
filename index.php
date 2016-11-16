@@ -7,15 +7,15 @@ session_start();
 $site_path = realpath(dirname(__FILE__));
 $site_path = $site_path . "/html";
 define('__SITE_PATH', $site_path);
-define('APP_ROOT', 'sklep');
+define('APP_ROOT', 'sklep1');
 //dołączenie pliku init.php
-include 'html\includes\init.php';
+include 'html/includes/init.php';
 //utworzenie instancji routera i dodanie go do rejestru
 $registry->router = new router($registry);
 //utworzenie instancji szablonu widoku i dodanie go do rejestru
 $registry->template = new Template($registry);
 //ustawienie ścieżki w której znajdują się kontrolery
-$registry->router->setPath(__SITE_PATH . '\controller');
+$registry->router->setPath(__SITE_PATH . '/controller');
 ?>
 
 
@@ -32,19 +32,19 @@ $registry->router->setPath(__SITE_PATH . '\controller');
         <script src="/<?= APP_ROOT ?>/html/content/scripts/jquery-1.11.2.min.js"></script> 
     </head>
     <body>
-        <?php include 'html\includes\menu.php'; ?> 
+        <?php include 'html/includes/menu.php'; ?> 
         <div class="container">
             <div class="row">
                 <div class="col-md-12">Sklep internetowy</div>
             </div>
             <div class="row"> 
                 <div class="col-md-12">
-                    <?php include 'html\includes\login.php'; ?> 
+                    <?php include 'html/includes/login.php'; ?> 
                 </div>
             </div>   
             <div class="row"> 
                 <div class="col-md-12">
-                    <?php include 'html\includes\koszyk.php'; ?> 
+                    <?php include 'html/includes/koszyk.php'; ?> 
                 </div>
             </div>  
             <div class="row">
